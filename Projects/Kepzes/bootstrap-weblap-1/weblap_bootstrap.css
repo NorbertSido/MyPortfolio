@@ -1,0 +1,159 @@
+/* Body */
+*{
+    font-family: Sans-serif;
+}
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    background-color: #ffffff;
+}
+
+footer a, h1, h3, h4 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header, footer, .card {
+    color: #ffffff;
+    background-color: #3a4149;
+}
+
+/* Header */
+.logo a img {
+    max-height: 6em;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.social a img {
+    display: inline;
+    max-height: 2em;
+    margin-left: 1em;
+}
+
+.social a:nth-child(3) {
+    padding-right: 1em;
+}
+
+.logo img, .social img {
+    border: solid 0px black;
+    border-radius: 50px;
+}
+
+/* Nav bar */
+nav .container-fluid {
+    background-color: #575d64;
+}
+
+.nav-tabs {
+    border: none;
+}
+
+nav button {
+    margin: 5px;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-item a:hover {
+    background-color: #ffffff;
+    color: #575d64;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ffffff;
+    color: #575d64;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.nav-link.show:hover {
+    color: #575d64;
+}
+
+.dropdown-menu{
+    background-color: #575d64;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+}
+
+/* Cards */
+.article_card {
+    margin-bottom: 1em;
+}
+
+.card {
+    color: #ffffff;
+}
+
+.card img {
+    padding: 1em;
+}
+
+.cardbtn {
+    color: #ffffff
+}
+
+.cardbtn:hover {
+    font-weight: bolder;
+    background-color: #ffffff;
+    color: #575d64;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Table */
+table, thead {
+    border: 1px solid;
+}
+
+table td:hover {
+    cursor: pointer;
+}
+
+/* Footer */
+.contact {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #575d64;
+    padding: 1em;
+}
+
+.contact div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-weight: bolder;
+    margin-bottom: 1em;
+    border-bottom: solid 1px #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: lightblue;
+    border: solid 1px lightblue;
+    border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+#table{
+    margin: auto;
+    border: 1px solid black;
+}
+#page {
+    width: fit-content;
+    font-size: 2em;
+    margin: auto;
+}
+th, td{
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+tbody td {
+    font-weight: bolder;
+}
+
+#dataRequest{
+    margin-left: 55em;
+}
+
+a {
+    text-decoration: none;
+    margin: 2px;
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
+}
+#modalUserAvatar {
+    float:left;
+}
+caption {
+    caption-side: top;
+    text-align: center;
+}
+#nameButton{
+    border: none;
+    background: none;
+    font-weight: bolder;
+
+}
+#nameButton:hover{
+    font-size: 2em;
+    color: green;
+}
