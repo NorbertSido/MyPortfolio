@@ -3,6 +3,7 @@
         const table = document.getElementById('table');
         const page = document.getElementById("page");
 
+// ==== Táblázat létrehozása ==== //
         function createTable(){
             const h2 = document.createElement('h2');
             const caption = document.createElement('caption');
@@ -48,6 +49,7 @@
             tbody.id = 'usersList';
             table.appendChild(tbody);
 
+// ==== Táblázat felhasználó hozzáadása form ==== //
             // Create tfoot
             const tfoot = document.createElement('tfoot');
             const formRow = document.createElement('tr');
@@ -85,7 +87,7 @@
                 // form Email
                 const emailTD = document.createElement('td');
                 const emailInput = document.createElement('input');
-                emailInput.type = 'text';
+                emailInput.type = 'email';
                 emailInput.id = 'newUserEmail';
                 emailInput.placeholder = 'Email';
                 emailTD.appendChild(emailInput);
@@ -108,8 +110,8 @@
                             {
                                 if(firstNameInput.length < 2) throw new Error('First name-nek legalább 2 karakter hosszúnak kell lennie! ') 
                                 if(lastNameInput.length < 2) throw new Error('Last name-nek legalább 2 karakter hosszúnak kell lennie! ')
-                                // if(email vizsgálata)
-
+                                // Email validáció készítése
+                                
                                 addUser(inputImg, firstNameInput, lastNameInput, emailInput);
                             }
                             else alert('Minden mező kitöltése kötelező!')
@@ -124,6 +126,7 @@
         }
         createTable();
 
+// ==== Felhasználó hozzáadása ==== //
         async function addUser(image ,firstName, lastName, email){
 
             let addUserdata = {image ,firstName, lastName, email}
@@ -147,6 +150,7 @@
                 else alert('Sajnáljuk, a feltöltés nem sikerült!')
             }
 
+// ====  ==== //
         function createUsers(usersData) {
             const userListData = document.getElementById("usersList");
             const tr = document.createElement("tr");
@@ -198,6 +202,7 @@
             userListData.appendChild(tr);
       }
 
+// ==== Adatok szűrése darabszámra ==== //
         function datarequest(){
             dataPerPage = parseInt(document.getElementById('dataRequest').value);
             const URL = baseURL + '?per_page=' + dataPerPage;
@@ -207,6 +212,7 @@
             loadData(URL);
         }
 
+// ==== Adatok lapozhatósága ==== //
         function createPages(last_page){
             
             for(let p = 1; p <= last_page; p++){
@@ -224,7 +230,8 @@
             page.appendChild(a);
           }
         }
-      
+
+// ==== Felhasználó törlése ==== //
         async function deleteUser(id){
             try{
                 let response = await fetch(baseURL + '/' + id,
@@ -249,6 +256,7 @@
             }
         }
         
+// ==== Névjegykártya megjelenítése ==== //
         async function selectedUser(id){
             try{
                 let response = await fetch(baseURL + '/' + id,
@@ -315,6 +323,7 @@
             }
         }
         
+// ==== Adatok frissítése ==== //
         async function refreshUser(id, firstName, lastName, email){
             let newData = {firstName, lastName, email}
             let response = await fetch(baseURL + '/' + id,
@@ -335,6 +344,7 @@
                 else alert('Sajnáljuk, a frissítés nem sikerült!')
             }
             
+// ==== Adatok betöltése ==== //
         async function loadData(URL) {
             try {
                 let result = await fetch(URL);

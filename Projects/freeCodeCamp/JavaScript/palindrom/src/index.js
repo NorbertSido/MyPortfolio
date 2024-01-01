@@ -19,15 +19,15 @@ function palindrome() {
     if (inputField.value !== "") {
         let p = document.createElement('p');
         p.className = "resultP";
-        p.innerHTML = ""
         resultDiv.appendChild(p)
-
+        
         if (cleanedInput === reverseInput) {
-            p.innerHTML = inputField.value + ' is a palindrome!';
+            p.innerHTML = `<span style="font-weight: bold;">${inputField.value}</span> is a palindrome!`;
         }
         else {
-            p.innerHTML = inputField.value + ' is not a palindrome!'
+            p.innerHTML = `<span style="font-weight: bold;">${inputField.value}</span> is not a palindrome!`;
         }
+        inputField.value = "";d
     }
     else alertClick(inputField)
 }
