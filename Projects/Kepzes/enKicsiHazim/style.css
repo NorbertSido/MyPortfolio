@@ -58,10 +58,13 @@ a{
 /* HERO */
 .hero {
     color: #fff;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .hero img{
     max-height: 750px;
+    border-radius: 0;
 }
 
 .card-title {
@@ -112,6 +115,7 @@ h2{
 }
 
 .expensive{
+    box-sizing: border-box;
     font-weight: bold;
     background-color: #333399;
     color: #fff;
@@ -121,6 +125,7 @@ h2{
 }
 
 .cheap {
+    box-sizing: border-box;
     font-weight: bold;
     background-color: var(--myBgColor);
     color: #fff;
